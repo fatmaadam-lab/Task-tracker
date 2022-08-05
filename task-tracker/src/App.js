@@ -32,7 +32,11 @@ const deleteTask = (id) => {
 
 // Toggle Reminder 
 const toogleReminder = (id) =>{ 
-    console.log('Reminder test')
+    setTasks(
+      tasks.map((task) =>
+        task.id === id ? { ...task, reminder: !task.reminder } : task
+      )
+    )
 }
 
 
