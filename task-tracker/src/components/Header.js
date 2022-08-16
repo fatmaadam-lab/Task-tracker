@@ -1,13 +1,10 @@
 import PropTypes from 'prop-types'
 
 const Header = (props) => {
-    const onClick = () =>{
-        console.log('click')
-    }
   return (
     <header className='header'>
         <h1>Task Tracker { props.title }</h1>
-        <button  onClick={onClick} className='btn'> Add </button>
+        <button  onClick={props.onAdd} className='btn'> {props.showAdd ? 'Close' : 'Add'} </button>
     </header>
   )
 }
